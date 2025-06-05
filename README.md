@@ -1,5 +1,3 @@
-# Time Series Forecasting Research
-
 
 # Walmart Sales Forecasting: Advanced Time Series Modeling and Analysis
 
