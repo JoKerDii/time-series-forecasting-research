@@ -1,0 +1,134 @@
+{
+  "analysis_overview": {
+    "models_analyzed": [
+      "primary_model"
+    ],
+    "features_analyzed": 61,
+    "analysis_date": "2025-06-04 22:27:18"
+  },
+  "performance_summary": {
+    "primary_model": {
+      "MAPE": "51.03%",
+      "R2": "-13.689",
+      "Directional_Accuracy": "0.50",
+      "Suitable_for_Business": "False"
+    }
+  },
+  "business_insights": {
+    "key_drivers": {
+      "top_5_drivers": [
+        "Sales_rolling_mean_4",
+        "Sales_rolling_min_4",
+        "Sales_lag_52",
+        "Sales_rolling_mean_8",
+        "Sales_rolling_mean_12"
+      ],
+      "driver_scores": {
+        "Sales_rolling_mean_4": {
+          "average_importance": 0.9651003578856368,
+          "consistency": 1,
+          "evidence_count": 1
+        },
+        "Sales_rolling_min_4": {
+          "average_importance": 0.9592423530195304,
+          "consistency": 1,
+          "evidence_count": 1
+        },
+        "Sales_lag_52": {
+          "average_importance": 0.9553124826901618,
+          "consistency": 1,
+          "evidence_count": 1
+        },
+        "Sales_rolling_mean_8": {
+          "average_importance": 0.9525614984197324,
+          "consistency": 1,
+          "evidence_count": 1
+        },
+        "Sales_rolling_mean_12": {
+          "average_importance": 0.948504714836284,
+          "consistency": 1,
+          "evidence_count": 1
+        }
+      },
+      "controllable_drivers": {
+        "Sales_rolling_mean_4": "Unknown - Requires business assessment",
+        "Sales_rolling_min_4": "Unknown - Requires business assessment",
+        "Sales_lag_52": "Unknown - Requires business assessment",
+        "Sales_rolling_mean_8": "Unknown - Requires business assessment",
+        "Sales_rolling_mean_12": "Unknown - Requires business assessment"
+      }
+    },
+    "recommendations": [
+      {
+        "area": "Promotional Strategy",
+        "recommendation": "Markdowns show high impact on sales. Consider strategic markdown timing and magnitude optimization.",
+        "priority": "High",
+        "actionability": "High"
+      },
+      {
+        "area": "Holiday Planning",
+        "recommendation": "Holiday periods significantly impact sales. Enhance holiday inventory and marketing strategies.",
+        "priority": "High",
+        "actionability": "High"
+      },
+      {
+        "area": "Economic Monitoring",
+        "recommendation": "Economic factors (Unemployment, Fuel_Price) significantly impact sales. Implement economic indicator monitoring for demand forecasting.",
+        "priority": "Medium",
+        "actionability": "Medium"
+      },
+      {
+        "area": "Seasonal Planning",
+        "recommendation": "Peak sales occur in month 12. Optimize inventory and staffing for seasonal patterns.",
+        "priority": "Medium",
+        "actionability": "High"
+      }
+    ],
+    "risk_factors": [
+      {
+        "risk": "High Forecast Error",
+        "description": "primary_model shows high prediction error (MAPE: 51.0%)",
+        "impact": "High",
+        "mitigation": "Use ensemble methods or additional features"
+      },
+      {
+        "risk": "Poor Trend Prediction",
+        "description": "primary_model struggles with predicting sales direction",
+        "impact": "Medium",
+        "mitigation": "Incorporate leading indicators or external data"
+      }
+    ],
+    "opportunities": [
+      {
+        "opportunity": "Total_MarkDown Optimization",
+        "description": "Total_MarkDown shows high impact on sales and is controllable",
+        "potential_impact": "Medium",
+        "implementation": "A/B testing and optimization algorithms"
+      },
+      {
+        "opportunity": "IsHoliday Optimization",
+        "description": "IsHoliday shows high impact on sales and is controllable",
+        "potential_impact": "Medium",
+        "implementation": "A/B testing and optimization algorithms"
+      }
+    ]
+  },
+  "causal_insights": {
+    "Total_MarkDown": {
+      "mechanism": "Price reduction drives demand",
+      "evidence_strength": 0.23194489689189962
+    },
+    "Unemployment": {
+      "mechanism": "Economic conditions affect purchasing power",
+      "evidence_strength": 0.10617608965795419
+    },
+    "Temperature": {
+      "mechanism": "Seasonal demand patterns",
+      "evidence_strength": 0.06381001317946955
+    },
+    "IsHoliday": {
+      "mechanism": "Holiday shopping patterns",
+      "evidence_strength": 0.03689096801041452
+    }
+  }
+}
